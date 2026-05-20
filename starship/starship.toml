@@ -1,0 +1,15 @@
+add_newline = true
+
+format = "$directory${custom.git_worktree}$git_branch$character"
+right_format = ""
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[git_branch]
+truncation_symbol = ''
+
+[directory]
+truncation_length = 4
+truncate_to_repo = true
