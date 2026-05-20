@@ -17,3 +17,20 @@
 # You can remove these comments if you want or leave
 # them for future reference.
 #
+
+let current_path = ($env | get --optional PATH | default [])
+let normalized_path = if (($current_path | describe) == "string") {
+    $current_path | split row (char esep)
+} else {
+    $current_path
+}
+
+$env.PATH = (
+    [
+        "/opt/homebrew/bin"
+        "/opt/homebrew/sbin"
+    ]
+    | append $normalized_path
+    | flatten
+    | uniq
+)
