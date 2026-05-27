@@ -1,0 +1,28 @@
+{
+  "Require module": {
+    "prefix": "req",
+    "body": "local ${1:name} = require(\"${2:module}\")",
+    "description": "Create a local require"
+  },
+  "Function": {
+    "prefix": "fn",
+    "body": [
+      "local function ${1:name}(${2:args})",
+      "\t${0}",
+      "end"
+    ],
+    "description": "Create a local function"
+  },
+  "Lazy plugin spec": {
+    "prefix": "plug",
+    "body": [
+      "{",
+      "\t\"${1:author/plugin}\",",
+      "\topts = {",
+      "\t\t${0}",
+      "\t},",
+      "},"
+    ],
+    "description": "Create a lazy.nvim plugin spec"
+  }
+}

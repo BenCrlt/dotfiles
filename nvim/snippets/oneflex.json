@@ -1,0 +1,22 @@
+{
+  "Oneflex script": {
+    "prefix": "sc",
+    "body": [
+      "import \"reflect-metadata\";",
+      "import { MicroServicesClients } from \"../../src/microServices/types\";",
+      "import { RedisServices } from \"../../src/redis/types\";",
+      "import { Repositories } from \"../../src/tools/RepositoryType\";",
+      "import { main } from \"./utils/main\";",
+      "",
+      "async function script(",
+      "  db: Repositories,",
+      "  redisServices: RedisServices,",
+      "  microServices: MicroServicesClients,",
+      "): Promise<void> {}",
+      "",
+      "void main({ script, useTransaction: true, rollbackTransaction: true });",
+      ""
+    ],
+    "description": "Oneflex script"
+  }
+}

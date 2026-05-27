@@ -1,0 +1,17 @@
+{
+  "TODO comment": {
+    "prefix": "todo",
+    "body": ["$LINE_COMMENT TODO: ${1:description}"],
+    "description": "Insert a TODO comment using the current file comment style"
+  },
+  "Current date": {
+    "prefix": "cdate",
+    "body": "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+    "description": "Insert the current date"
+  },
+  "UUID": {
+    "prefix": "uuid",
+    "body": "$UUID",
+    "description": "Insert a random UUID"
+  }
+}

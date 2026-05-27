@@ -31,6 +31,11 @@ const zoxide_autoload = ($autoload_dir | path join "zoxide.nu")
 if not ($zoxide_autoload | path exists) {
     zoxide init nushell | save -f $zoxide_autoload
 }
+
+let zoxide_hooked = ($env | get --optional __zoxide_hooked)
+if (($zoxide_hooked | describe) == "string") {
+    hide-env __zoxide_hooked
+}
 source $zoxide_autoload
 const aliases_file = ($nu.config-path | path dirname | path join "aliases.nu")
 source $aliases_file

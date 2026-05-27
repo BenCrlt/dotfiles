@@ -1,9 +1,7 @@
-theme = catppuccin-mocha.conf
+theme = catppuccin-macchiato.conf
 font-size = 15
 mouse-hide-while-typing = true
 window-decoration =true
-background-opacity = 0.7
-background-blur-radius = 20
 font-family = JetBrains Mono
 env = PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-command = /opt/homebrew/bin/nu
+command = tmux
